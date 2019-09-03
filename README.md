@@ -12,3 +12,12 @@ VGGNet is great because it's simple and has great performance, coming in second 
 
 This way we can use VGGNet as a feature extractor for our images then easily train a simple classifier on top of that. What we'll do is take the first fully connected layer with 4096 units, including thresholding with ReLUs. We can use those values as a code for each image, then build a classifier on top of those codes.
 
+## Pretrained VGGNet
+
+This is a really nice implementation of VGGNet, quite easy to work with. The network has already been trained and the parameters are available from this link.
+Here, just concatenated the batch of images into the images array, and create the feed_dict as input images. And then session run, got the relu6 layer,and then that became codes_batch. 
+And then after that, since codes is already existing,then we go to this else part, and then we just concatenate the new codes block with the old codes block.
+So you can just build up a new set of codes like this.
+
+
+
