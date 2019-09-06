@@ -19,7 +19,7 @@ Here, just concatenated the batch of images into the images array, and create th
 
 And then after that, since codes is already existing,then we go to this else part, and then we just concatenate the new codes block with the old codes block.
 So you can just build up a new set of codes like this.
-
+  
 
 
 
