@@ -19,7 +19,18 @@ Here, just concatenated the batch of images into the images array, and create th
 
 And then after that, since codes is already existing,then we go to this else part, and then we just concatenate the new codes block with the old codes block.
 So you can just build up a new set of codes like this.
-  
+
+## VGG-16
+### The Architecture
+
+![VGG16 Architecture](https://github.com/Golden-Bug/Transfer-Learning---CNN/blob/master/assets/vgg16.png)
+
+The input to cov1 layer is of fixed size 224 x 224 RGB image. The image is passed through a stack of convolutional (conv.) layers, where the filters were used with a very small receptive field: 3×3 (which is the smallest size to capture the notion of left/right, up/down, center). In one of the configurations, it also utilizes 1×1 convolution filters, which can be seen as a linear transformation of the input channels (followed by non-linearity). The convolution stride is fixed to 1 pixel; the spatial padding of conv. layer input is such that the spatial resolution is preserved after convolution, i.e. the padding is 1-pixel for 3×3 conv. layers. Spatial pooling is carried out by five max-pooling layers, which follow some of the conv.  layers (not all the conv. layers are followed by max-pooling). Max-pooling is performed over a 2×2 pixel window, with stride 2.
+
+Three Fully-Connected (FC) layers follow a stack of convolutional layers (which has a different depth in different architectures): the first two have 4096 channels each, the third performs 1000-way ILSVRC classification and thus contains 1000 channels (one for each class). The final layer is the soft-max layer. The configuration of the fully connected layers is the same in all networks.
+
+
+
 
 
 
